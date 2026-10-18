@@ -1,0 +1,14 @@
+[project]
+name = "applied-ai-playground"
+version = "0.1.0"
+description = "One repo, 25+ mini-apps, one Postgres, shared evals/guardrails/observability."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+db = ["psycopg[binary]>=3.1"]
+
+[tool.pytest.ini_options]
+testpaths = ["apps", "shared"]
+pythonpath = ["."]
